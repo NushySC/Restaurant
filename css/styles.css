@@ -1,0 +1,337 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Inria Serif", serif;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.hero {
+  background-image: linear-gradient(
+      rgba(158, 14, 115, 0.74),
+      rgba(224, 133, 12, 0.788)
+    ),
+    url("../img/dessert-3354303_1920.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  height: 70vh;
+  font-family: "Lilita One", cursive;
+}
+
+#nav {
+  background-color: rgba(255, 255, 255, 0);
+  height: 3em;
+  margin-bottom: 2em;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Lilita One", cursive;
+  padding: 0.5em;
+  height: 3em;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#nav.scrolled {
+  background-color: thistle;
+  transition: background-color 600ms linear;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  color: white;
+}
+
+.nav__links li:hover {
+
+    color: orangered;
+  }
+
+.logo {
+    height:90%;
+
+}
+
+.logo img {
+    height: 100%;
+}
+
+.nav__links li {
+  padding: .6em;
+  margin-left: 1em;
+  display: block;
+  text-align: center;
+}
+
+.hero hgroup {
+margin: 5em auto;
+  width: 50%;
+  height: 20%;
+  color: white;
+  font-family: "Inria Serif", serif;
+}
+
+.hero hgroup h1 {
+  font-size: 4em;
+  font-family: "Lilita One", cursive;
+  letter-spacing: 0.07em;
+}
+
+.hero hgroup h2 {
+  font-size: 2em;
+}
+
+/* MENU */
+
+#menu {
+    color: grey;
+}
+.grid__menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 3%;
+  margin: 2em auto;
+}
+
+.menu__item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  background-color: thistle;
+  border-radius: 0.3em;
+  font-family: "Lilita One", cursive;
+  color: white;
+}
+.menu__item img {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 1em;
+}
+
+.h2-orange {
+  color: orangered;
+  font-size: 3em;
+  text-align: center;
+  font-family: "Lilita One", cursive;
+  margin-bottom: 0.6em;
+}
+.menus__flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.list__title {
+  color: orangered;
+  font-family: "Lilita One", cursive;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.list {
+  list-style-type: none;
+}
+.list__element {
+  background-color: thistle;
+  padding: 0.8em;
+  margin: 0.2em;
+  color: white;
+  box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.24);
+  transition: all 1s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list__element:hover {
+  background-color: rgb(138, 84, 138);
+}
+.drinks,
+.dinner,
+.lunch,
+.breakfast {
+  width: 23%;
+}
+
+/* ABOUT and FEATURES*/
+#about {
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    color: white;
+}
+
+#about h2 {
+    color: white;
+}
+.about__content,
+.feat__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.about__text,
+.feat__text {
+  width: 55%;
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+.about__pic,
+.feat__pic {
+  width: 40%;
+}
+
+.about__pic img,
+.feat__pic img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* FEATURES */
+
+#features, #gallery {
+    color: grey;
+}
+.feat__list {
+  list-style-type: none;
+  text-align: left;
+}
+
+.feat__item::before {
+  font-family: "FontAwesome";
+  display: inline-block;
+  font-size: 0.6em;
+  color: orangered;
+  content: "\f053\f053";
+  padding-right: 1em;
+}
+
+
+/* GALLERY */
+
+.sort__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+    margin: 2em auto;
+}
+
+#gallery ul {
+    list-style-type: none;
+}
+
+.sort__btn {
+    background-color: orangered;
+    padding: .5em;
+    color: white;
+    border-radius: .3em;
+}
+
+.grid__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 4%;
+}
+
+.gallery__item--front img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* BUSINESS */
+
+#business {
+    background-color: thistle;
+    color: white;
+}
+
+.ldBar-label {
+    color: white;
+    font-family: "Lilita One", cursive;
+    font-size: 1.5em;
+    font-weight: 900;
+  }
+
+  .grid__gallery .grid__item:nth-child(2) .ldBar-label:after {
+    content: " USD"; /* change from % to USD */
+    font-size: 0.6em;
+  }
+
+  .grid__gallery .grid__item:nth-child(3) .ldBar-label:after {
+    content: " people"; /* change from % to USD */
+    font-size: 0.6em;
+  }
+
+  #business .grid__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2em;
+
+  }
+
+  #business .grid__item p {
+    margin-top: .8em;
+    color: white;
+    font-family: "Lilita One", cursive;
+    font-size: 1.2em;
+}
+
+
+/* TEAM */
+
+.team__grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+    width: 100%;
+}
+
+.team__member {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 1em;
+    background-color: thistle;
+}
+
+.team__pic {
+    width: 90%;
+    
+
+}
+.team__pic img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .6em 0 .6em 0;
+}
