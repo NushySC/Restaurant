@@ -1,3 +1,11 @@
+:root {
+  --primary: #9a1750;
+  --secondary: rgb(238, 76, 124);
+  --light: #e3afbc;
+  --dark: #3f0014;
+  --white: #E3E2DF;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,10 +25,8 @@
 }
 
 .hero {
-  background-image: linear-gradient(
-      rgba(158, 14, 115, 0.74),
-      rgba(224, 133, 12, 0.788)
-    ),
+  background-image: linear-gradient(to right, rgb(238, 76, 124),
+      rgba(227, 175, 188, 0.596)),
     url("../img/dessert-3354303_1920.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -52,7 +58,7 @@
 }
 
 #nav.scrolled {
-  background-color: thistle;
+  background-color: var(--primary);
   transition: background-color 600ms linear;
 }
 
@@ -61,21 +67,21 @@
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  color: white;
+  color: var(--white);
 }
 
 .nav__links li:hover {
 
-    color: orangered;
-  }
+  color: var(--secondary);
+}
 
 .logo {
-    height:90%;
+  height: 90%;
 
 }
 
 .logo img {
-    height: 100%;
+  height: 100%;
 }
 
 .nav__links li {
@@ -86,7 +92,7 @@
 }
 
 .hero hgroup {
-margin: 5em auto;
+  margin: 5em auto;
   width: 50%;
   height: 20%;
   color: white;
@@ -106,8 +112,9 @@ margin: 5em auto;
 /* MENU */
 
 #menu {
-    color: grey;
+  color: var(--dark);
 }
+
 .grid__menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -120,11 +127,12 @@ margin: 5em auto;
   display: flex;
   flex-direction: column;
   padding: 0.5em;
-  background-color: thistle;
+  background-color: var(--light);
   border-radius: 0.3em;
   font-family: "Lilita One", cursive;
   color: white;
 }
+
 .menu__item img {
   width: 100%;
   object-fit: cover;
@@ -132,12 +140,13 @@ margin: 5em auto;
 }
 
 .h2-orange {
-  color: orangered;
+  color: var(--secondary);
   font-size: 3em;
   text-align: center;
   font-family: "Lilita One", cursive;
   margin-bottom: 0.6em;
 }
+
 .menus__flex {
   display: flex;
   flex-direction: row;
@@ -146,16 +155,18 @@ margin: 5em auto;
 }
 
 .list__title {
-  color: orangered;
+  color: var(--primary);
   font-family: "Lilita One", cursive;
   margin-bottom: 1em;
   text-align: center;
 }
+
 .list {
   list-style-type: none;
 }
+
 .list__element {
-  background-color: thistle;
+  background-color: var(--light);
   padding: 0.8em;
   margin: 0.2em;
   color: white;
@@ -168,8 +179,9 @@ margin: 5em auto;
 }
 
 .list__element:hover {
-  background-color: rgb(138, 84, 138);
+  background-color: var(--secondary);
 }
+
 .drinks,
 .dinner,
 .lunch,
@@ -179,13 +191,14 @@ margin: 5em auto;
 
 /* ABOUT and FEATURES*/
 #about {
-    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-    color: white;
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  color: white;
 }
 
 #about h2 {
-    color: white;
+  color: white;
 }
+
 .about__content,
 .feat__content {
   display: flex;
@@ -200,6 +213,7 @@ margin: 5em auto;
   font-size: 0.9em;
   line-height: 1.7em;
 }
+
 .about__pic,
 .feat__pic {
   width: 40%;
@@ -214,9 +228,11 @@ margin: 5em auto;
 
 /* FEATURES */
 
-#features, #gallery {
-    color: grey;
+#features,
+#gallery {
+  color: grey;
 }
+
 .feat__list {
   list-style-type: none;
   text-align: left;
@@ -235,103 +251,106 @@ margin: 5em auto;
 /* GALLERY */
 
 .sort__btns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 40%;
-    margin: 2em auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  margin: 2em auto;
 }
 
 #gallery ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .sort__btn {
-    background-color: orangered;
-    padding: .5em;
-    color: white;
-    border-radius: .3em;
+  background-color: orangered;
+  padding: .5em;
+  color: white;
+  border-radius: .3em;
 }
 
 .grid__gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 4%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 4%;
 }
 
 .gallery__item--front img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* BUSINESS */
 
 #business {
-    background-color: thistle;
-    color: white;
+  background-color: thistle;
+  color: white;
 }
 
 .ldBar-label {
-    color: white;
-    font-family: "Lilita One", cursive;
-    font-size: 1.5em;
-    font-weight: 900;
-  }
+  color: white;
+  font-family: "Lilita One", cursive;
+  font-size: 1.5em;
+  font-weight: 900;
+}
 
-  .grid__gallery .grid__item:nth-child(2) .ldBar-label:after {
-    content: " USD"; /* change from % to USD */
-    font-size: 0.6em;
-  }
+.grid__gallery .grid__item:nth-child(2) .ldBar-label:after {
+  content: " USD";
+  /* change from % to USD */
+  font-size: 0.6em;
+}
 
-  .grid__gallery .grid__item:nth-child(3) .ldBar-label:after {
-    content: " people"; /* change from % to USD */
-    font-size: 0.6em;
-  }
+.grid__gallery .grid__item:nth-child(3) .ldBar-label:after {
+  content: " people";
+  /* change from % to USD */
+  font-size: 0.6em;
+}
 
-  #business .grid__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 2em;
+#business .grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
 
-  }
+}
 
-  #business .grid__item p {
-    margin-top: .8em;
-    color: white;
-    font-family: "Lilita One", cursive;
-    font-size: 1.2em;
+#business .grid__item p {
+  margin-top: .8em;
+  color: white;
+  font-family: "Lilita One", cursive;
+  font-size: 1.2em;
 }
 
 
 /* TEAM */
 
 .team__grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 2em;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
+  width: 100%;
 }
 
 .team__member {
-    width: 23%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    padding: 1em;
-    background-color: thistle;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 1em;
+  background-color: thistle;
 }
 
 .team__pic {
-    width: 90%;
-    
+  width: 90%;
+
 
 }
+
 .team__pic img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: .6em 0 .6em 0;
+  width: 100%;
+  object-fit: cover;
+  border-radius: .6em 0 .6em 0;
 }
